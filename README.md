@@ -22,4 +22,8 @@ A full latex template with all convinient settings
 ```
 
 
+## Bib-Resources 
+Creating bib resources can be done by using the different types of bib entries. Convenient tools like JabRef can be very helpful in organizing your resources. 
+> **Note:** Try to avoid the use of _ in a bib entry.
+> **Note:** @electronic is not directly a type. 
 

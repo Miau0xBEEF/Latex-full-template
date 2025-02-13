@@ -1,0 +1,80 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+
+\title{Sample Document}
+\author{Author Name}
+\date{\today}
+
+
+\usepackage{textcomp}
+\usepackage[top=2.5cm, bottom=3.5cm, left=2.5cm, right=2.5cm]{geometry}				
+\usepackage[ngerman]{babel}		
+\usepackage[T1]{fontenc}		
+\usepackage[utf8]{inputenc}		
+\usepackage[babel, german=quotes]{csquotes}	% Zitieren
+\usepackage[backend=biber
+            ]{biblatex}
+
+
+
+
+\addbibresource{bib/resources.bib}
+\begin{document}
+
+
+
+\section{Introduction}
+This is a sample document with some citations. \\
+This is an Article \cite{ArticleSource}\\
+This is an Book \cite{example_Book}\\
+This is an electronic \cite{example} \\
+This is an manual \cite{Ch340_1D}
+This is an misc \cite{MiscKey} \\
+This is an online \cite{WinNT}\\
+
+This is an nocite of online\_ example \nocite{online_example}. No citation but it will be in the bibliography.
+
+test \cite{Siemens_OPCUA_Def}
+
+\printbibliography[
+heading=bibintoc,
+title={Whole bibliography}
+]
+
+\newpage
+\subsection{Bibliography with all sources}
+\printbibliography[title={All sources}]
+
+\subsection{Bibliography with Books}
+\printbibliography[title={Books}, type=book]
+
+\subsection{Bibliography with Articles}
+\printbibliography[title={Articles}, type=article]
+
+\subsection{Bibliography with misc}
+\printbibliography[title={misc}, type=misc]
+
+\subsection{Bibliography with online}
+\printbibliography[title={online}, type=online]
+
+
+
+
+\subsection{Bibliography with electronics}
+This is a little bit tricky. Electronics is not a valid filter for biber but is more a subcategory of online. 
+
+\subsubsection{Cheating by using the keyword}
+One way is to use the keyword-fild. This is normally a field to adjust categorys to a finer grid. It is intended to subcategorize something like books into books of type physics, language and so on. 
+\printbibliography[keyword=elec, title={Only electronics}]
+
+\subsubsection{Using a Filter}
+\defbibfilter{electronics}{
+  keyword=elec
+}
+\printbibliography[filter=electronics]
+
+
+
+
+\end{document}

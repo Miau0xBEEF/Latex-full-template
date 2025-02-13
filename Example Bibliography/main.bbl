@@ -1,0 +1,329 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{ArticleSource}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=988281fa8b7a82ab8c8ece8c85d9d1c3}{%
+           family={Author},
+           familyi={A\bibinitperiod},
+           given={A\bibnamedelima Article},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{988281fa8b7a82ab8c8ece8c85d9d1c3}
+      \strng{fullhash}{988281fa8b7a82ab8c8ece8c85d9d1c3}
+      \strng{fullhashraw}{988281fa8b7a82ab8c8ece8c85d9d1c3}
+      \strng{bibnamehash}{988281fa8b7a82ab8c8ece8c85d9d1c3}
+      \strng{authorbibnamehash}{988281fa8b7a82ab8c8ece8c85d9d1c3}
+      \strng{authornamehash}{988281fa8b7a82ab8c8ece8c85d9d1c3}
+      \strng{authorfullhash}{988281fa8b7a82ab8c8ece8c85d9d1c3}
+      \strng{authorfullhashraw}{988281fa8b7a82ab8c8ece8c85d9d1c3}
+      \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{19}
+      \field{month}{2}
+      \field{note}{my Note}
+      \field{title}{Article}
+      \field{urlday}{21}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{volume}{20}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{5}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb myURL.de
+      \endverb
+      \verb{url}
+      \verb myURL.de
+      \endverb
+      \keyw{article}
+    \endentry
+    \entry{example_Book}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=083009888c1aa76a62d9dd9794a57e32}{%
+           family={Author},
+           familyi={A\bibinitperiod},
+           given={Book},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {Delulu}%
+      }
+      \strng{namehash}{083009888c1aa76a62d9dd9794a57e32}
+      \strng{fullhash}{083009888c1aa76a62d9dd9794a57e32}
+      \strng{fullhashraw}{083009888c1aa76a62d9dd9794a57e32}
+      \strng{bibnamehash}{083009888c1aa76a62d9dd9794a57e32}
+      \strng{authorbibnamehash}{083009888c1aa76a62d9dd9794a57e32}
+      \strng{authornamehash}{083009888c1aa76a62d9dd9794a57e32}
+      \strng{authorfullhash}{083009888c1aa76a62d9dd9794a57e32}
+      \strng{authorfullhashraw}{083009888c1aa76a62d9dd9794a57e32}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{24}
+      \field{edition}{0}
+      \field{isbn}{0-0000-0000-0}
+      \field{month}{2}
+      \field{pagetotal}{0}
+      \field{title}{An examplebook}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{volume}{0}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{0}
+      \range{pages}{-1}
+      \verb{urlraw}
+      \verb BookURL.de
+      \endverb
+      \verb{url}
+      \verb BookURL.de
+      \endverb
+      \keyw{BookKeyword}
+      \warn{\item Range field 'pages' in entry 'example_Book' is malformed, falling back to literal}
+    \endentry
+    \entry{MiscKey}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=d7a3102288491c79b8b04900ab108068}{%
+           family={Author},
+           familyi={A\bibinitperiod},
+           given={Misc},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {DeLuLu}%
+      }
+      \list{organization}{1}{%
+        {MyOrganisation}%
+      }
+      \strng{namehash}{d7a3102288491c79b8b04900ab108068}
+      \strng{fullhash}{d7a3102288491c79b8b04900ab108068}
+      \strng{fullhashraw}{d7a3102288491c79b8b04900ab108068}
+      \strng{bibnamehash}{d7a3102288491c79b8b04900ab108068}
+      \strng{authorbibnamehash}{d7a3102288491c79b8b04900ab108068}
+      \strng{authornamehash}{d7a3102288491c79b8b04900ab108068}
+      \strng{authorfullhash}{d7a3102288491c79b8b04900ab108068}
+      \strng{authorfullhashraw}{d7a3102288491c79b8b04900ab108068}
+      \field{extraname}{3}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{11}
+      \field{month}{2}
+      \field{note}{Some notes as well}
+      \field{title}{A misc article}
+      \field{type}{someType}
+      \field{urlday}{26}
+      \field{urlmonth}{2}
+      \field{urlyear}{2025}
+      \field{version}{0.0}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb www.someURL.de
+      \endverb
+      \verb{url}
+      \verb www.someURL.de
+      \endverb
+      \keyw{misc Keyword}
+    \endentry
+    \entry{online_example}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=015502d8df269cd44c710ef8645445e0}{%
+           family={Author},
+           familyi={A\bibinitperiod},
+           given={Some},
+           giveni={S\bibinitperiod},
+           prefix={online\bibnamedelima electronics},
+           prefixi={o\bibinitperiod\bibinitdelim e\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {german}%
+      }
+      \list{organization}{1}{%
+        {example organization}%
+      }
+      \strng{namehash}{015502d8df269cd44c710ef8645445e0}
+      \strng{fullhash}{015502d8df269cd44c710ef8645445e0}
+      \strng{fullhashraw}{015502d8df269cd44c710ef8645445e0}
+      \strng{bibnamehash}{015502d8df269cd44c710ef8645445e0}
+      \strng{authorbibnamehash}{015502d8df269cd44c710ef8645445e0}
+      \strng{authornamehash}{015502d8df269cd44c710ef8645445e0}
+      \strng{authorfullhash}{015502d8df269cd44c710ef8645445e0}
+      \strng{authorfullhashraw}{015502d8df269cd44c710ef8645445e0}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{11}
+      \field{month}{2}
+      \field{note}{example note}
+      \field{title}{Online electronics}
+      \field{version}{0.1}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://example.de
+      \endverb
+      \verb{url}
+      \verb https://example.de
+      \endverb
+      \keyw{elec}
+    \endentry
+    \entry{example}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=f9e2771efb7bdac5c42a25f6ab12a89e}{%
+           family={Author},
+           familyi={A\bibinitperiod},
+           given={Some\bibnamedelima Electronics},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {german}%
+      }
+      \list{organization}{1}{%
+        {example organization}%
+      }
+      \strng{namehash}{f9e2771efb7bdac5c42a25f6ab12a89e}
+      \strng{fullhash}{f9e2771efb7bdac5c42a25f6ab12a89e}
+      \strng{fullhashraw}{f9e2771efb7bdac5c42a25f6ab12a89e}
+      \strng{bibnamehash}{f9e2771efb7bdac5c42a25f6ab12a89e}
+      \strng{authorbibnamehash}{f9e2771efb7bdac5c42a25f6ab12a89e}
+      \strng{authornamehash}{f9e2771efb7bdac5c42a25f6ab12a89e}
+      \strng{authorfullhash}{f9e2771efb7bdac5c42a25f6ab12a89e}
+      \strng{authorfullhashraw}{f9e2771efb7bdac5c42a25f6ab12a89e}
+      \field{extraname}{4}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{11}
+      \field{month}{2}
+      \field{note}{example note}
+      \field{title}{A new Begining}
+      \field{version}{0.1}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://example.de
+      \endverb
+      \verb{url}
+      \verb https://example.de
+      \endverb
+      \keyw{elec}
+    \endentry
+    \entry{WinNT}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=358d71ab15e1e4d5ae7feecdc4b0f69d}{%
+           family={LLC},
+           familyi={L\bibinitperiod},
+           given={MultiMedia},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{358d71ab15e1e4d5ae7feecdc4b0f69d}
+      \strng{fullhash}{358d71ab15e1e4d5ae7feecdc4b0f69d}
+      \strng{fullhashraw}{358d71ab15e1e4d5ae7feecdc4b0f69d}
+      \strng{bibnamehash}{358d71ab15e1e4d5ae7feecdc4b0f69d}
+      \strng{authorbibnamehash}{358d71ab15e1e4d5ae7feecdc4b0f69d}
+      \strng{authornamehash}{358d71ab15e1e4d5ae7feecdc4b0f69d}
+      \strng{authorfullhash}{358d71ab15e1e4d5ae7feecdc4b0f69d}
+      \strng{authorfullhashraw}{358d71ab15e1e4d5ae7feecdc4b0f69d}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{MS Windows NT} Kernel Description}
+      \field{urlday}{30}
+      \field{urlmonth}{9}
+      \field{urlyear}{2010}
+      \field{year}{1999}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://web.archive.org/web/20080207010024/http://www.808multimedia.com/winnt/kernel.htm
+      \endverb
+      \verb{url}
+      \verb http://web.archive.org/web/20080207010024/http://www.808multimedia.com/winnt/kernel.htm
+      \endverb
+    \endentry
+    \entry{Siemens_OPCUA_Def}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=74993f42c49b81f3a77103bcbb247c2b}{%
+           family={Siemens},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Siemens}%
+      }
+      \strng{namehash}{74993f42c49b81f3a77103bcbb247c2b}
+      \strng{fullhash}{74993f42c49b81f3a77103bcbb247c2b}
+      \strng{fullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
+      \strng{bibnamehash}{74993f42c49b81f3a77103bcbb247c2b}
+      \strng{authorbibnamehash}{74993f42c49b81f3a77103bcbb247c2b}
+      \strng{authornamehash}{74993f42c49b81f3a77103bcbb247c2b}
+      \strng{authorfullhash}{74993f42c49b81f3a77103bcbb247c2b}
+      \strng{authorfullhashraw}{74993f42c49b81f3a77103bcbb247c2b}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OPC UA - strukturierte Daten bis in die Cloud}
+      \verb{urlraw}
+      \verb https://www.siemens.com/de/de/produkte/automatisierung/industrielle-kommunikation/opc-ua.html
+      \endverb
+      \verb{url}
+      \verb https://www.siemens.com/de/de/produkte/automatisierung/industrielle-kommunikation/opc-ua.html
+      \endverb
+    \endentry
+    \entry{Ch340_1D}{manual}{}{}
+      \list{organization}{1}{%
+        {Jiangsu Haoheng Co., Ltd.}%
+      }
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labeltitlesource}{title}
+      \field{number}{CH340 C}
+      \field{pagetotal}{8}
+      \field{title}{USB to serial chip CH340}
+      \field{version}{1D}
+      \field{year}{n.A.}
+      \verb{urlraw}
+      \verb https://pdf1.alldatasheet.com/datasheet-pdf/view/1132602/WCH/CH340.html
+      \endverb
+      \verb{url}
+      \verb https://pdf1.alldatasheet.com/datasheet-pdf/view/1132602/WCH/CH340.html
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
