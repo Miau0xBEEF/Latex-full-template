@@ -1,0 +1,201 @@
+\usepackage{listings} %For code in appendix
+
+%Umlaute in Listings korrekt ausgeben!
+\lstset{literate=%
+    {Ö}{{\"O}}1
+    {Ä}{{\"A}}1
+    {Ü}{{\"U}}1
+    {ß}{{\ss}}1
+    {ü}{{\"u}}1
+    {ä}{{\"a}}1
+    {ö}{{\"o}}1
+    {~}{{\textasciitilde}}1
+}
+
+
+\DeclareCaptionFont{white}{\color{white}} % Maybe this will make some truble
+\DeclareCaptionFormat{listing}{\noindent\colorbox{gray}{\parbox{\textwidth-2\fboxsep}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,aboveskip=-0.1em,labelfont=white,textfont=white,font={small,tt}}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%% Define Language %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%When using defined language: Use style= and not language:  \begin{lstlisting}[style=CMakeLists, ... 
+%Have a look at the definition of CMakeLists
+\lstdefinelanguage{CMake}{
+    morekeywords={
+        cmake_minimum_required, project, add_executable, add_library, target_link_libraries,
+        target_include_directories, find_package, include_directories, set, message,
+        if, else, elseif, endif, while, endwhile, foreach, endforeach, option, enable_language,
+        include, configure_file, install, file, list, math, macro, function, return, add_subdirectory
+    },
+    sensitive=true, % CMake is case-sensitive
+    morecomment=[l]\#,  % Comments start with #
+    morestring=[b]",    % Strings inside double quotes
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%% Basic Listing %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Setting lst global 
+%\lstset
+%{ 
+%    language=CMakeLists,
+%    basicstyle=\footnotesize,
+%    numbers=left,
+%    stepnumber=1,
+%    showstringspaces=false,
+%    tabsize=1,
+%    breaklines=true,
+%    breakatwhitespace=false,
+%}
+
+
+
+\lstdefinestyle{Bash}{ 
+	language=Bash,
+	backgroundcolor=\color{SoftGrey},
+	rulecolor=\color{backgroundColour},
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta}\bfseries,
+	numberstyle=\color{codegray},
+	stringstyle=\color{codepurple},
+	showstringspaces=false,
+	basicstyle=\ttfamily\scriptsize\color{Black},
+	numbers=left,
+	captionpos=t,
+	tabsize=2,
+	showstringspaces=false,
+	showtabs=false,    
+	breaklines=true,
+	columns=fullflexible,
+}
+
+\lstdefinestyle{BashInline} {
+ 	language=Bash,
+	backgroundcolor=\color{SoftGrey},
+	rulecolor=\color{backgroundColour},
+	keywordstyle=\color{black}\bfseries,
+	commentstyle=\color{black},
+	stringstyle=\color{codepurple},
+	showstringspaces=false,
+	basicstyle=\ttfamily\scriptsize\color{Black},
+	numbers=none,
+	captionpos=t,
+	tabsize=4,
+	breaklines=true,
+	columns=fullflexible,
+	aboveskip=10pt,
+	belowskip=10pt
+}
+
+
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{white},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\scriptsize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=t,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    columns=fullflexible,
+}
+
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{SoftGrey},   
+	rulecolor=\color{SoftGrey},
+    commentstyle=\color{mGreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{mGray},
+    stringstyle=\color{mPurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=t,                    
+    keepspaces=true,                 
+     numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+\lstdefinestyle{AppendixCStyle}{
+    backgroundcolor=\color{SoftGrey},   
+	rulecolor=\color{SoftGrey},
+    commentstyle=\color{black},
+    keywordstyle=\color{black},
+    numberstyle=\tiny\color{mGray},
+    stringstyle=\color{black},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=t,                    
+    keepspaces=true,                 
+     numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+
+
+
+
+\lstdefinestyle{CMakeLists}{ 
+    language=CMake,  % Use the custom-defined CMake language
+    backgroundcolor=\color{SoftGrey},  % Light gray background
+    rulecolor=\color{backgroundColour},  % Box frame color
+    commentstyle=\color{codegreen},  % Green comments
+    keywordstyle=\color{blue}\bfseries,  % Blue bold keywords
+    numberstyle=\color{codegray},  % Gray line numbers
+    stringstyle=\color{codepurple},  % Purple strings
+    basicstyle=\ttfamily\scriptsize\color{Black},  % Small monospaced black font
+    numbers=left,  % Line numbers on the left
+    captionpos=t,  % Caption at the top
+    tabsize=2,  % Tabs equal to 2 spaces
+    showstringspaces=false,  
+    showtabs=false,    
+    breaklines=true,  % Enable line breaking
+    columns=fullflexible,  % Better text alignment
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Binding a Listing configuration to a new command %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\lstsetappendix}{%
+    \lstset{ 
+        basicstyle=\footnotesize,
+        numbers=left,
+        stepnumber=1,
+        showstringspaces=false,
+        tabsize=1,
+        breaklines=true,
+        breakatwhitespace=false,
+        backgroundcolor=\color{WhiteBackground},
+    }%
+}
