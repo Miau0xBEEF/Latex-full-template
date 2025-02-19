@@ -27,3 +27,13 @@ Creating bib resources can be done by using the different types of bib entries. 
 > **Note:** Try to avoid the use of _ in a bib entry.
 > **Note:** @electronic is not directly a type. 
 
+
+# Shortcuts 
+
+New Item              Enter -> [ctr+shift+i]
+Compile Document      F1
+textit                [shift + i]
+bold                  [shift + b]
+texttt                [ctrl + shift + t]
+comment out region    [ctrl + t]
+uncomment region      [ctrl + u]
