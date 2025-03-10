@@ -1,80 +1,85 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 
-
-\title{Sample Document}
-\author{Author Name}
-\date{\today}
+\usepackage{biblatex}% Necesarry because biber is configured as backend
 
 
-\usepackage{textcomp}
-\usepackage[top=2.5cm, bottom=3.5cm, left=2.5cm, right=2.5cm]{geometry}				
-\usepackage[ngerman]{babel}		
-\usepackage[T1]{fontenc}		
-\usepackage[utf8]{inputenc}		
-\usepackage[babel, german=quotes]{csquotes}	% Zitieren
-\usepackage[backend=biber
-            ]{biblatex}
+%Einfuegen von Grafiken 
+\usepackage{graphicx}
+\graphicspath{ {./pic/}{./pic/nested} } %Sollte erweitert werden 
+\usepackage{float} 	% H = Here bei figures
+%\usepackage{subfigure} %Outdated
+\usepackage{subcaption} %Newer version for subfigure. 
+\usepackage[usenames,dvipsnames]{color}
 
 
 
-
-\addbibresource{bib/resources.bib}
-\begin{document}
-
-
-
-\section{Introduction}
-This is a sample document with some citations. \\
-This is an Article \cite{ArticleSource}\\
-This is an Book \cite{example_Book}\\
-This is an electronic \cite{example} \\
-This is an manual \cite{Ch340_1D}
-This is an misc \cite{MiscKey} \\
-This is an online \cite{WinNT}\\
-
-This is an nocite of online\_ example \nocite{online_example}. No citation but it will be in the bibliography.
-
-test \cite{Siemens_OPCUA_Def}
-
-\printbibliography[
-heading=bibintoc,
-title={Whole bibliography}
-]
-
-\newpage
-\subsection{Bibliography with all sources}
-\printbibliography[title={All sources}]
-
-\subsection{Bibliography with Books}
-\printbibliography[title={Books}, type=book]
-
-\subsection{Bibliography with Articles}
-\printbibliography[title={Articles}, type=article]
-
-\subsection{Bibliography with misc}
-\printbibliography[title={misc}, type=misc]
-
-\subsection{Bibliography with online}
-\printbibliography[title={online}, type=online]
-
-
-
-
-\subsection{Bibliography with electronics}
-This is a little bit tricky. Electronics is not a valid filter for biber but is more a subcategory of online. 
-
-\subsubsection{Cheating by using the keyword}
-One way is to use the keyword-fild. This is normally a field to adjust categorys to a finer grid. It is intended to subcategorize something like books into books of type physics, language and so on. 
-\printbibliography[keyword=elec, title={Only electronics}]
-
-\subsubsection{Using a Filter}
-\defbibfilter{electronics}{
-  keyword=elec
+\newcommand{\insertfigure}[4]{
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=#2]{#1}
+    \caption{#3}
+    \label{#4}
+  \end{figure}
 }
-\printbibliography[filter=electronics]
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin of Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{document}
+\textbf{Including Images to a document}\\
+
+There are multiple ways of insertig images. Here are three examples for including a graphic to the document. Als here is the figure-envirorment used. You can also include images by includegraphics. 
+\begin{itemize}
+\item[1] Inserting by a custom function: Image \ref{fig:Example_from_insert}
+\item[2] Inserting by standard includegraphics with full relative path: Image \ref{fig:Example_from_include}
+\item[3] Inserting by standard includegraphics path added to graphicspath: Image \ref{fig:Nested_Image}
+\end{itemize}
+
+\textbf{1. Function}\\
+This is convenient because it does not take much space in the document. You can create one function for all images. On top it keeps the consistency to all images. Less convenient is that the auto-reference does not recognizes the label: \textit{fig:Example\_from\_insert}
+\insertfigure{pic/example.png}{1.0\textwidth}{Example image from insertfiguter}{fig:Example_from_insert}
+
+\textbf{2. Full description}\\
+This methode takes much space and some time to add images. But you will have full controll about the image. But you have to add every image with full configuration. 
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1.0\textwidth]{pic/example.png}
+    \caption{Example from IncludeGraphics}
+    \label{fig:Example_from_include}
+\end{figure}
+
+
+\textbf{3. Full description}\\
+Using the graphicspath in the preamble adds a little bit compfotability to the document. You just have to know the filename and to add the folder that contains the data you want to include. In this example the image is nested in a subfolder that was added to graphicspath. 
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\textwidth]{nastyExample.png}
+\caption{Nested image in subdirectory}
+\label{fig:Nested_Image}
+\end{figure}
+
+
+\subsection{Side by Side Figure}
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{nastyExample}
+  \caption{A subfigure}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{nastyExample}
+  \caption{A subfigure}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{A figure with two subfigures}
+\label{fig:test}
+\end{figure}
 
 \end{document}

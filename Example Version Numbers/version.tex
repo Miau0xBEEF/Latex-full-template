@@ -1,0 +1,43 @@
+\documentclass{article}
+
+% Initialize the counter
+\newcounter{versionNumber}
+
+\makeatletter 
+\newread\versionfile
+\newwrite\versionfileout
+
+% Define path and name of the version file
+\def\versionfilepath{./}
+\def\versionfilename{version.txt}
+\def\fullversionpath{\versionfilepath\versionfilename}
+
+% Read version number from file if it exists
+\IfFileExists{\fullversionpath}{%
+  \openin\versionfile=\fullversionpath
+  \read\versionfile to \versiontemp
+  \closein\versionfile
+  \ifx\versiontemp\empty
+    \setcounter{versionNumber}{1}
+  \else
+    \setcounter{versionNumber}{\versiontemp}
+    \stepcounter{versionNumber}
+  \fi
+}{%
+  \setcounter{versionNumber}{1}% Create file only if missing
+}
+
+% Write version number back to file
+\AtEndDocument{%
+  \immediate\openout\versionfileout=\fullversionpath
+  \immediate\write\versionfileout{\theversionNumber}
+  \immediate\closeout\versionfileout
+}
+
+\makeatother
+
+\begin{document}
+This version-control relys on versionfilename that is locatet in versionfilepath
+Version: \theversionNumber
+
+\end{document}

@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{biblatex}% Necesarry because biber is configured as backend
+
+
+\usepackage[xindy]{imakeidx}
+%\usepackage[nomain,acronym,xindy,toc,automake]{glossaries} % nomain, if you define glossaries in a file, and you use \include{INP-00-glossary}
+\usepackage[
+nonumberlist,                       % keine Seitenzahlen anzeigen
+acronym,                            % ein Abkürzungsverzeichnis erstellen
+%toc,                                % Einträge im Inhaltsverzeichnis
+section]                            % im Inhaltsverzeichnis auf section-Ebene erscheinen
+{glossaries}     
+
+\usepackage{nomencl}
+\GlsSetXdyCodePage{duden-utf8}
+
+
+%Creating a new glossary 
+\newglossary[slg]{siemens}{sgr}{sgo}{Siemens Glossary}
+
+
+
+%                 
+\makeglossaries 
+
+\makeindex
+
+\makenomenclature
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%   Insert content  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File that contains acronyms
+\input{bib/acronym.tex}
+\newacronym{NASA}{NASA}{National Aeronautics and Space Administration}
+
+% File that contains glossarys
+\input{bib/glossary.tex}
+% File that contains nomenclature
+\input{bib/nomenclature.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin of Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+\section{Usage}
+
+The \gls{EXMPL} was established in today.\\
+And they created this \gls{example} entry for us. \\
+
+Maybe there is the need to invoke the creation of Glossarys and Nomenclature. \\
+makeindex \%.nlo -s nomencl.ist -o \%.nls \\
+makeglossaries \%
+
+
+\newpage
+\addcontentsline{toc}{subsection}{Appendix}
+\addcontentsline{toc}{subsection}{Acronyms}
+\printglossary[type=\acronymtype]
+
+\addcontentsline{toc}{subsection}{Glossary}
+\printglossary
+
+
+\addcontentsline{toc}{subsection}{Nomenclature}
+\printnomenclature
+
+
+\end{document}
