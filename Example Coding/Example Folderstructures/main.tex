@@ -1,0 +1,69 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\author{Claas-Focke Schmidt}
+\title{Folder Structures }
+
+% % % % % % % % % % % % PROJECT RELATED PACKAGES % % % % % % % % % % % % % %
+
+%%%%%% Dirtreee to print folder -structure %%%%%%
+\usepackage{dirtree}  %Darstellung eines Dateibaumes oder Verzeichnisstruktur 
+
+%%%%%% Using fontawesome for icons %%%%%%
+\usepackage{fontawesome5}  
+
+%%%%%% xcolor for colors %%%%%% 
+\usepackage{xcolor}
+
+\begin{document}
+
+\title{Folder structures with dirtree}
+
+
+\section{Simple dirtree}
+This is a simple dirtree: 
+\dirtree{%
+.1 MyProject.
+.2 build.
+.2 subfolder.
+.3 subsubfolder.
+.3 subsubfolder.
+.3 subsubfolder.
+}
+
+
+\section{dirtree in figure}
+Figure \ref{fig:SmpldirInFigure} shows a simple dirtree in a figure envirorment. Don`t forget to use make command to use \\ref\{\}
+\begin{figure}[h]
+\dirtree{%
+.1 MyProject.
+.2 build.
+.2 subfolder.
+.3 subsubfolder.
+.3 subsubfolder.
+.3 subsubfolder.
+}
+\caption{Simple dirtree in figure-envirorment}
+\label{fig:SmpldirInFigure}
+\end{figure}
+
+
+\section{dirtree with Colors and Icons}
+The figure \ref{fig:moreComplexDir} shows a dirtree with colored items. 
+\begin{figure}[h]
+\dirtree{%
+.1 \textcolor{red}{\faFolder\ MyProject}.
+.2 \textcolor{red}{\faFolder\ build}.
+.2 \faFile\ CMakeLists.txt.
+.2 \faFile\ main.c.
+.2 \faFile\ myServer.h.
+.2 \faFile\ myServer.c.
+}
+\caption{Structure with icons and colored structures}
+\label{fig:moreComplexDir}
+\end{figure}
+
+\end{document}
