@@ -1,0 +1,44 @@
+\documentclass[a4paper,12pt]{article}
+ 
+\usepackage[german]{babel}	% Deutsche überschriften und Silbentrennung
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{fancyhdr} %%kopf fusszeile
+\usepackage{datetime} % Uhrzeit 
+
+\usepackage[space]{grffile}
+\parindent 0.0cm %Absatz
+\parskip 1,5ex plus 0.5ex minus 0.5ex %%abstand zw zwei absaetzen
+\usepackage{setspace} %Zeilenabstände
+\onehalfspacing 
+
+\usepackage{geometry}
+\geometry{a4paper, left=40mm, right=30mm, bottom=25mm, top=25mm}
+
+
+
+
+\usepackage[xindy]{imakeidx}
+%\usepackage[nomain,acronym,xindy,toc,automake]{glossaries} % nomain, if you define glossaries in a file, and you use \include{INP-00-glossary}
+\usepackage[
+nonumberlist,                       % keine Seitenzahlen anzeigen
+acronym,                            % ein Abkürzungsverzeichnis erstellen
+%toc,                                % Einträge im Inhaltsverzeichnis
+section]                            % im Inhaltsverzeichnis auf section-Ebene erscheinen
+{glossaries}     
+
+\GlsSetXdyCodePage{duden-utf8}
+\newglossary[slg]{siemens}{sgr}{sgo}{Siemens Glossary}
+
+\usepackage{translator}
+                 
+\makeglossaries 
+\makeindex
+
+
+
+%%%%%%%%%%%%%%% CUSTOM COMMANDS 
+
+\newcommand{\graytt}[1]{\textcolor{gray}{\texttt{\normalfont #1}}}
+ 

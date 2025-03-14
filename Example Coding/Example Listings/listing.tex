@@ -1,0 +1,50 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\author{Claas-Focke Schmidt}
+\title{Basic Listings }
+
+\usepackage{geometry}
+\geometry{a4paper, left=40mm, right=30mm, bottom=25mm, top=25mm}
+
+
+\input{settings/colors.tex}
+\input{settings/lst_settings.tex}
+
+
+\begin{document}
+%\lstset{language=Bash, style=BashInline}
+%\lstset
+%{ 
+%    basicstyle=\footnotesize,
+%    numbers=left,
+%    stepnumber=1,
+%    showstringspaces=false,
+%    tabsize=1,
+%    breaklines=true,
+%    breakatwhitespace=false,
+%    backgroundcolor=\color{WhiteBackground},
+%}
+
+
+\section{Simple Listing}
+Lisitng \ref{lst:listing} is a simple example from bash. 
+\begin{lstlisting}[language=bash, caption={Check Python}, label=lst:listing]
+C:\Users\ME> python -V
+C:\Users\ME> python
+\end{lstlisting}
+
+
+
+
+\section{Listing from file}
+
+\lstinputlisting[caption={Example from .txt}, label={lst:txt}]{./example.txt}
+\newpage 
+
+
+\end{document}
