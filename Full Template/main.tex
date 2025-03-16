@@ -1,78 +1,148 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
+%\documentclass{article}
+%\usepackage[utf8]{inputenc}
+%
+%
+%\title{Sample Document}
+%\author{Author Name}
+%\date{\today}
+%
+%
+%\usepackage{textcomp}
+%\usepackage[top=2.5cm, bottom=3.5cm, left=2.5cm, right=2.5cm]{geometry}				
+%\usepackage[ngerman]{babel}		
+%\usepackage[T1]{fontenc}		
+%\usepackage[utf8]{inputenc}		
+%\usepackage[babel, german=quotes]{csquotes}	% Zitieren
+%\usepackage[backend=biber
+%            ]{biblatex}
+
+%==========================================================================
+% SETTINGS
+
+% Keep the order of inputs as is because some settings depend on previous settings 
+%==========================================================================
+
+%%% Settings for hyper references 
+  % Needs to be called before xindy
+\input{./settings/hyperrefSettings.tex}
+
+%%% Settings for the document 
+\input{./settings/docSettings.tex}
+\setcounter{tocdepth}{4} 
 
 
-\title{Sample Document}
-\author{Author Name}
-\date{\today}
+\usepackage[xindy]{imakeidx}
+%\usepackage[nomain,acronym,xindy,toc,automake]{glossaries} % nomain, if you define glossaries in a file, and you use \include{INP-00-glossary}
+\usepackage[
+nonumberlist,                       % keine Seitenzahlen anzeigen
+acronym,                            % ein Abkürzungsverzeichnis erstellen
+%toc,                                % Einträge im Inhaltsverzeichnis
+section]                            % im Inhaltsverzeichnis auf section-Ebene erscheinen
+{glossaries}     
+
+\GlsSetXdyCodePage{duden-utf8}
+\newglossary[slg]{siemens}{sgr}{sgo}{Siemens Glossary}
+
+\usepackage{translator}
+
+                 
+\makeglossaries 
+\makeindex
 
 
-\usepackage{textcomp}
-\usepackage[top=2.5cm, bottom=3.5cm, left=2.5cm, right=2.5cm]{geometry}				
-\usepackage[ngerman]{babel}		
-\usepackage[T1]{fontenc}		
-\usepackage[utf8]{inputenc}		
-\usepackage[babel, german=quotes]{csquotes}	% Zitieren
-\usepackage[backend=biber
-            ]{biblatex}
+
+%%%%%%%%%%%%%%% CUSTOM COMMANDS 
+
+\newcommand{\graytt}[1]{\textcolor{gray}{\texttt{\normalfont #1}}}
+
+%%% Settings for Colors 
+\input{./settings/colorsSettings.tex}
+
+
+%%% Settings for images 
+\input{./settings/imgSettings.tex}
+\graphicspath{ {./pic/title/}{./pic/general/} } %put in all graphix folders in a new{} 
+
+%%% Settings for Tikz 
+% Tikz is an image generator  
+\input{./settings/tikzSettings.tex}
+
+
+%%% Settings for Tables  
+\input{./settings/tableSettings.tex}
+
+
+%%% Settings for mathmatics 
+\input{./settings/mathSettings.tex}
+
+
+%%% Settings for listings 
+\input{./settings/lstSettings.tex}
+
+%%% Settings for bibliography 
+\input{./settings/bibSettings.tex}
+
+%%% Settings for acronyms 
+\input{./settings/acroSettings.tex}
 
 
 
+%%%%%%%%%%%%%% Versioning the File %%%%%%%%%%%%%%
+\input{./apps/version.tex}
 
+
+
+%%%%%%%%%%%%%% Adding bib-ressources %%%%%%%%%%%%%%
 \addbibresource{bib/resources.bib}
+
+\input{bib/acronym.tex}
+
+\input{bib/nomenclature.tex}
+
+
+
+
+%==========================================================================
+% START OF DOCUMENT
+%==========================================================================
+
 \begin{document}
+\pagenumbering{gobble}	%no page numbers
+\pagestyle{fancy}
+
+%%%%%%%%%%%%%% Including general %%%%%%%%%%%%%%
+\input{./chapters/0_1_Title.tex}
+
+\input{./chapters/0_2_declaration_of_honesty.tex}
+
+\input{./chapters/0_3_abstract.tex}
+
+%%%%%%%%%%%%%% Including Chapters %%%%%%%%%%%%%%
+\tableofcontents 
+\pagenumbering{arabic}
+\setcounter{section}{0}
+
+\input{./chapters/1_0_Chap1_Introduction.tex}
 
 
-
-\section{Introduction}
-This is a sample document with some citations. \\
-This is an Article \cite{ArticleSource}\\
-This is an Book \cite{example_Book}\\
-This is an electronic \cite{example} \\
-This is an manual \cite{Ch340_1D}
-This is an misc \cite{MiscKey} \\
-This is an online \cite{WinNT}\\
-
-This is an nocite of online\_ example \nocite{online_example}. No citation but it will be in the bibliography.
-
-test \cite{Siemens_OPCUA_Def}
-
-\printbibliography[
-heading=bibintoc,
-title={Whole bibliography}
-]
-
-\newpage
-\subsection{Bibliography with all sources}
-\printbibliography[title={All sources}]
-
-\subsection{Bibliography with Books}
-\printbibliography[title={Books}, type=book]
-
-\subsection{Bibliography with Articles}
-\printbibliography[title={Articles}, type=article]
-
-\subsection{Bibliography with misc}
-\printbibliography[title={misc}, type=misc]
-
-\subsection{Bibliography with online}
-\printbibliography[title={online}, type=online]
+\input{./chapters/2_0_Chap2_Literature.tex}
 
 
+\input{./chapters/3_0_Chap3_Methodes.tex}
 
 
-\subsection{Bibliography with electronics}
-This is a little bit tricky. Electronics is not a valid filter for biber but is more a subcategory of online. 
+\input{./chapters/4_0_Chap4_Conclusion.tex}
 
-\subsubsection{Cheating by using the keyword}
-One way is to use the keyword-fild. This is normally a field to adjust categorys to a finer grid. It is intended to subcategorize something like books into books of type physics, language and so on. 
-\printbibliography[keyword=elec, title={Only electronics}]
+%%%%%%%%%%%%%% Including Appendix %%%%%%%%%%%%%%
+\input{./chapters/5_0_Chap5_Appendix.tex}
 
-\subsubsection{Using a Filter}
-\defbibfilter{electronics}{
-  keyword=elec
-}
-\printbibliography[filter=electronics]
+\input{./chapters/5_1_Biblography.tex}
+
+\addcontentsline{toc}{subsection}{Abbildungsverzeichnis}
+\listoffigures 
+
+\addcontentsline{toc}{subsection}{Listings}
+\lstlistoflistings
 
 
 

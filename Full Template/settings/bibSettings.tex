@@ -1,0 +1,117 @@
+\usepackage[backend=biber
+            ]{biblatex}
+
+
+\usepackage{translator}
+
+
+%Nomenclature             
+\usepackage{nomencl}
+
+   
+           
+           
+           
+
+
+
+\newbibmacro*{partdescription}{%
+  \printnames{partdescription}%
+%  \setunit*{\addspace}%
+  \newunit}
+
+
+%\newbibmacro*{partdescription}{%
+% 	\printfield{partdescription}%}
+
+\DeclareNameAlias{partdescription}{default}
+  
+  
+\DeclareBibliographyDriver{myelectronicmanual}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author}%
+%  \usebibmacro{partdescription}%
+  \setunit{\addcomma\addspace}%
+%  \usebibmacro{myelcomp}%
+  \setunit{\labelnamepunct}\newblock
+  \usebibmacro{maintitle+title}%
+  \newunit\newblock
+  \printfield{part}%
+  \newunit\newblock
+%  \printfield{partdescription}%
+  \usebibmacro{partdescription}%
+  \printfield{version}%
+  \setunit{\addcomma\addspace}%
+  \usebibmacro{date}%
+  \newunit\newblock
+  \usebibmacro{url+urldate}%
+  \newunit\newblock
+  \usebibmacro{finentry}%
+}
+
+
+\DeclareBibliographyDriver{manual}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+      \usebibmacro{series+number}%
+      	\addcolon\space\space
+      %\setunit*{\addcolon\space}%
+  \usebibmacro{author/editor}%
+  \setunit{\printdelim{nametitledelim}}\newblock
+  \usebibmacro{title}%
+  \newunit
+  \printlist{language}%
+  \newunit\newblock
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{byeditor}%
+  \newunit\newblock
+  \printfield{edition}%
+  \newunit\newblock
+  \newunit\newblock
+  \printfield{type}%
+  \newunit
+  \printfield{version}%
+  \newunit
+  \printfield{note}%
+  \newunit\newblock
+  \printlist{organization}%
+  \newunit
+  \usebibmacro{publisher+location+date}%
+  \newunit\newblock
+  \usebibmacro{chapter+pages}%
+  \newunit
+  \printfield{pagetotal}%
+  \newunit\newblock
+  \iftoggle{bbx:isbn}
+    {\printfield{isbn}}
+    {}%
+  \newunit\newblock
+  \usebibmacro{doi+eprint+url}%
+  \newunit\newblock
+  \usebibmacro{addendum+pubstate}%
+  \setunit{\bibpagerefpunct}\newblock
+  \usebibmacro{pageref}%
+  \newunit\newblock
+  \iftoggle{bbx:related}
+    {\usebibmacro{related:init}%
+     \usebibmacro{related}}
+    {}%
+  \usebibmacro{finentry}}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% MAKE COMMANDS %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeglossaries 
+
+\makeindex
+
+\makenomenclature
+

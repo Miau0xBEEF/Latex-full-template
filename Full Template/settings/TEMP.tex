@@ -1,28 +1,6 @@
 
  
  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Einführen von Versionsnummern 
-%https://tex.stackexchange.com/questions/239958/add-version-number-to-document-from-file
-% Initialize the counter
-\newcounter{versionNumber}
-
-
-
-\makeatletter 
-% At the end write the current value back to the `.aux` file
-\AtEndDocument{%
-  \immediate\write\@auxout{%
-    \string\setcounter{versionNumber}{\number\value{versionNumber}}%
-  }%
-}
-
-\makeatother
-% Step the counter at the beginning
-\AtBeginDocument{%
-   \stepcounter{versionNumber}
-}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
  
@@ -50,13 +28,8 @@
 \usepackage{datetime} % Uhrzeit 
 
 
-%Einfuegen von Grafiken 
-\usepackage{graphicx}
-\graphicspath{ {./pic/OPC_UA_CLIENT/}{./pic/TIAClientUpdate/} } %Sollte erweitert werden 
-\usepackage{float} 	% fï¿½r H = Here bei figures
-%\usepackage{subfigure} %Outdated
-\usepackage{subcaption}
-\usepackage[usenames,dvipsnames]{color}
+
+
 
 
 
@@ -67,22 +40,16 @@
 \onehalfspacing 
 
 
-\usepackage{tikz}
-\usetikzlibrary{shapes,arrows}
-\usetikzlibrary{automata, positioning}
+
 
 %für die Erstellung von Tabellen automatisch gelesen aus csv daten
 \usepackage{lipsum}
-\usepackage{pgfplotstable}
 \usepackage{pdflscape}
 \usepackage{pdfpages}
 \usepackage{lscape}
-\usepackage{longtable}
 %%%%\usepackage[square,numbers]{natbib}
-\usepackage{hyperref}
-%Tabellen einstellung
-\usepackage{booktabs}			%für profesionelle Tabellen
-\renewcommand{\arraystretch}{1.3}	% Abstand zwischen reihen
+
+
 %\usepackage{textcomp}
 %\usepackage{ucs}
 \usepackage[justification=centering]{caption}
@@ -103,24 +70,16 @@
 \usepackage{enumitem} % Required for customizing the itemize environment
 
 
-%%%%%%%%%%%%%%% Table %%%%%%%%%%%%%%%
-\usepackage{xcolor,colortbl}
-
-
-\usepackage{fontawesome5}  % For icons
 
 
 
 
 
 
-%\newcolumntype{a}{>{\columncolor{Gray}}c}
-%\newcolumntype{b}{>{\columncolor{white}}c}
-%%%%%%%%%%%%%%% Colored Table %%%%%%%%%%%%%%%
 
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+
 
 %   %   %   %   %   %   %   %   %   %   % Biblography  %   %   %   %   %   %   %   %   %   %   %   %   %   %   %   %   
 \begin{filecontents}{Myelectronicmanual.dbx}
@@ -136,99 +95,12 @@ year}
 
 
 
-\usepackage[backend=biber
-            ]{biblatex}
 
 
 
 
-\newbibmacro*{partdescription}{%
-  \printnames{partdescription}%
-%  \setunit*{\addspace}%
-  \newunit}
-
-
-%\newbibmacro*{partdescription}{%
-% 	\printfield{partdescription}%}
-
-\DeclareNameAlias{partdescription}{default}
   
   
-\DeclareBibliographyDriver{myelectronicmanual}{%
-  \usebibmacro{bibindex}%
-  \usebibmacro{begentry}%
-  \usebibmacro{author}%
-%  \usebibmacro{partdescription}%
-  \setunit{\addcomma\addspace}%
-%  \usebibmacro{myelcomp}%
-  \setunit{\labelnamepunct}\newblock
-  \usebibmacro{maintitle+title}%
-  \newunit\newblock
-  \printfield{part}%
-  \newunit\newblock
-%  \printfield{partdescription}%
-  \usebibmacro{partdescription}%
-  \printfield{version}%
-  \setunit{\addcomma\addspace}%
-  \usebibmacro{date}%
-  \newunit\newblock
-  \usebibmacro{url+urldate}%
-  \newunit\newblock
-  \usebibmacro{finentry}%
-}
-
-
-\DeclareBibliographyDriver{manual}{%
-  \usebibmacro{bibindex}%
-  \usebibmacro{begentry}%
-      \usebibmacro{series+number}%
-      	\addcolon\space\space
-      %\setunit*{\addcolon\space}%
-  \usebibmacro{author/editor}%
-  \setunit{\printdelim{nametitledelim}}\newblock
-  \usebibmacro{title}%
-  \newunit
-  \printlist{language}%
-  \newunit\newblock
-  \usebibmacro{byauthor}%
-  \newunit\newblock
-  \usebibmacro{byeditor}%
-  \newunit\newblock
-  \printfield{edition}%
-  \newunit\newblock
-  \newunit\newblock
-  \printfield{type}%
-  \newunit
-  \printfield{version}%
-  \newunit
-  \printfield{note}%
-  \newunit\newblock
-  \printlist{organization}%
-  \newunit
-  \usebibmacro{publisher+location+date}%
-  \newunit\newblock
-  \usebibmacro{chapter+pages}%
-  \newunit
-  \printfield{pagetotal}%
-  \newunit\newblock
-  \iftoggle{bbx:isbn}
-    {\printfield{isbn}}
-    {}%
-  \newunit\newblock
-  \usebibmacro{doi+eprint+url}%
-  \newunit\newblock
-  \usebibmacro{addendum+pubstate}%
-  \setunit{\bibpagerefpunct}\newblock
-  \usebibmacro{pageref}%
-  \newunit\newblock
-  \iftoggle{bbx:related}
-    {\usebibmacro{related:init}%
-     \usebibmacro{related}}
-    {}%
-  \usebibmacro{finentry}}
-  
-  
-  \usepackage[l3]{csvsimple}
 
 
 
@@ -252,22 +124,8 @@ year}
 \setlength{\skip\footins}{2cm}
 % % % % % % % % % % % % % % % TITLE % % % % % % % % % % % % % % % % %
 
-%this is for auto generating the title for PDF MetaINFO! ... this is not for the real title of 
-%the document, which has to be defined unter main/title.tex
 
-\usepackage{titling}	%\thetitle
-\title{Latex Vorlage HS Emden Leer}
-\author{Der Autor}
-\date{\today}
-\usepackage{hyperref} 
-\hypersetup{
-   pdftitle={\thetitle},    % title
-    pdfauthor={\theauthor},     % %author
-    colorlinks=true,       % false: boxed links; true: colored links
-    %linkcolor=blue,       % color of internal links (change box color with %linkbordercolor)
-    linkcolor=.,       % color of internal links in textcolor
-    citecolor=green, 
-}
+
 
 
 
@@ -288,11 +146,8 @@ year}
 %==========================================================================
 % MISC COMMANDS
 %==========================================================================
-\usepackage{tablefootnote}
 
-\usepackage{nomencl}
 
-\setcounter{tocdepth}{4} 
 
 
 %~~~~~~~~~~~~~~~ 					Wichtig 							 ~~~~~~~~~~~~~~~
@@ -314,65 +169,14 @@ section]                            % im Inhaltsverzeichnis auf section-Ebene er
 \GlsSetXdyCodePage{duden-utf8}
 \newglossary[slg]{siemens}{sgr}{sgo}{Siemens Glossary}
 
-\usepackage{translator}
                  
-\makeglossaries 
-\makeindex
 
-
-\newenvironment{ALERTBOX}
-{\begin{tcolorbox}[colback=red!0!white,colframe=red!75!black,title=Achtung]}
-{\end{tcolorbox}}
-
-\newenvironment{COMMENTBOX}
-{\begin{tcolorbox}[colback=blue!0!white,colframe=blue!5!gray,title=Bemerkung]}
-{\end{tcolorbox}}
-
-\newcommand{\pic}{././pic}
 \usepackage{longtable}
-\usepackage{bytefield}
-
-\hypersetup{
-  colorlinks,
-  citecolor=black,
-  linkcolor=black,
-  urlcolor=black}
-
-
-
-\makenomenclature
 
 
 
 
 \pgfplotsset{compat=1.15} 
-
-
-
-
-
-
-% Define a new command for dark gray text
-%\newcommand{\graytt}[1]{\textcolor{gray}{\texttt{#1}}}
-\newcommand{\graytt}[1]{\textcolor{gray}{\texttt{\normalfont #1}}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -404,66 +208,25 @@ section]                            % im Inhaltsverzeichnis auf section-Ebene er
 
 \lstset{language=Bash,style=BashInline} 
 
-\pagenumbering{gobble}	%keine Seiten zahlen
-\pagestyle{fancy}
+
 
 \input{sections/main/title.tex}
 \input{sections/main/declaration_of_honesty.tex}
 
 
-
-
-
-
-
-
-
-
-
-
 \tableofcontents 
-
-
-
-
-
-
 
 %===============================
 % BEGIN CHAPTER LinuxCNC
 %===============================
 
-\newpage
-\pagenumbering{arabic}
-\setcounter{section}{0}
-
-%\input{bib/MathSymbols.tex}
-\nomenclature{\(G\)}{Giga}
-\nomenclature{\(M\)}{Mega}
-\nomenclature{\(Hz\)}{Frequenz: Herz in $\frac{1}{s}$}
-\nomenclature{\(B\)}{Byte}
-\nomenclature{\(Bit\)}{Bit}
-\nomenclature{\(s\)}{Sekunde}
-\nomenclature{\(V\)}{Volt}
 
 
 
-\input{sections/main/Chap1_Einleitung.tex}
-\newpage
-
-\input{sections/main/Chap2_StandDerTechnik.tex}
-\newpage
-
-\input{sections/main/Chap3_MaterialienUndMethoden.tex}
-\newpage
-
-\input{sections/main/Chap4_Fazit.tex}
-
-\newpage
-\input{sections/main/conclusion.tex}
 
 
-%=======================================================================================
+
+%=========================================================
 % APPENDIX
 %=========================================================
 \newpage
@@ -482,38 +245,11 @@ section]                            % im Inhaltsverzeichnis auf section-Ebene er
 %
 \newpage 
 \printbibliography[title={online}, type=online]
-% 
-% 
-% \newpage 
-%\printbibliography[title={Weitere Quellen},type=misc, nottype=manual, nottype=book, nottype=article]
-%%\bibliography{biblography} \addcontentsline{toc}{section}{Literaturverzeichnis}
-%%\bibliographystyle{abbrvnat}\textbf{}
-%
-%%\newpage
-%%\bibliography{sections/Bib_El_Manuals}\\
-%%\bibliographystyle{abbrvnat}\textbf{}
-
-
-\newpage
-\listoffigures \addcontentsline{toc}{subsection}{Abbildungsverzeichnis}
-\newpage 
-
-
-\addcontentsline{toc}{subsection}{Listings}
-\lstlistoflistings
-%\clearpage
 
 
 
 
-  
 
-\newpage
-
-
-
-%\printglossary[type=\acronymtype]
-%\printglossary[type=\acronymtype, title=Abbreviations]
 
 
 \lstset
@@ -527,8 +263,8 @@ section]                            % im Inhaltsverzeichnis auf section-Ebene er
     breakatwhitespace=false,
     backgroundcolor=\color{WhiteBackground},
 }
+
 \addcontentsline{toc}{subsection}{Anhang}
-%\subsection{}
 \label{sec: Anhang}
 
 
@@ -538,17 +274,7 @@ section]                            % im Inhaltsverzeichnis auf section-Ebene er
 
 
 
-%Acronyme
-\glsadd{ARM}\glsadd{RAM}\glsadd{DDR}\glsadd{LPDDR}\glsadd{MMC}\glsadd{PMIC}
-\glsadd{UART}\glsadd{bit}\glsadd{TTL}\glsadd{LDO}\glsadd{PCIE}
-\glsadd{i2c}\glsadd{SDK}\glsadd{RJ-45}\glsadd{8P8C}\glsadd{CAD}
-\glsadd{BIOS}\glsadd{SD-Karte}\glsadd{XML}\glsadd{JSON}\glsadd{eMMC}
 
-%Glossary Einträge
-\glsadd{flash-speicher}\glsadd{build}\glsadd{pip-python}\glsadd{Echtzeit}
-\glsadd{OB}\glsadd{FC}\glsadd{FB}\glsadd{Instanz-DB}\glsadd{Globaler-DB}
-\glsadd{Zyklische-Programmbearbeitung}\glsadd{Startereignis}\glsadd{Multiinstanz}
-\glsadd{glos:Determinismus}\glsadd{Isochron}\glsadd{Jitter}
 
 
 \newpage
@@ -569,9 +295,6 @@ section]                            % im Inhaltsverzeichnis auf section-Ebene er
 \addcontentsline{toc}{subsection}{Nomenclature}
 \printnomenclature
 \clearpage
-%\printindex
-%\printglossaries
 
-% -----------------------------------------
 \end{document}
 

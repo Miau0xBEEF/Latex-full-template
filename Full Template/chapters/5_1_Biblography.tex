@@ -1,0 +1,21 @@
+
+\addcontentsline{toc}{subsection}{Literatur}
+
+\subsection{Bibliography with Books}
+\printbibliography[title={Books}, type=book]
+
+\subsection{Bibliography with Articles}
+\printbibliography[title={Articles}, type=article]
+
+\subsection{Bibliography with misc}
+\printbibliography[title={misc}, type=misc]
+
+\subsection{Bibliography with online}
+\printbibliography[title={online}, type=online]
+
+
+\subsubsection{Using a Filter}
+\defbibfilter{electronics}{
+  keyword=elec
+}
+\printbibliography[filter=electronics]
