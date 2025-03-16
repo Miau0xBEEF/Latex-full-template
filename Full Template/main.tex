@@ -22,13 +22,40 @@
 % Keep the order of inputs as is because some settings depend on previous settings 
 %==========================================================================
 
-%%% Settings for hyper references 
-  % Needs to be called before xindy
-\input{./settings/hyperrefSettings.tex}
 
 %%% Settings for the document 
 \input{./settings/docSettings.tex}
 \setcounter{tocdepth}{4} 
+
+%%% Settings for Colors 
+\input{./settings/colorsSettings.tex}
+
+
+%%% Settings for hyper references 
+  % Needs to be called before xindy
+\input{./settings/hyperrefSettings.tex}
+
+
+
+
+
+
+%%% Settings for images 
+\input{./settings/imgSettings.tex}
+\graphicspath{ {./pic/title/}{./pic/general/} } %put in all graphix folders in a new{} 
+
+%%% Settings for Tikz 
+% Tikz is an image generator  
+\input{./settings/tikzSettings.tex}
+
+
+%%% Settings for Tables  
+\input{./settings/tableSettings.tex}
+
+
+%%% Settings for mathmatics 
+\input{./settings/mathSettings.tex}
+
 
 
 \usepackage[xindy]{imakeidx}
@@ -54,27 +81,6 @@ section]                            % im Inhaltsverzeichnis auf section-Ebene er
 %%%%%%%%%%%%%%% CUSTOM COMMANDS 
 
 \newcommand{\graytt}[1]{\textcolor{gray}{\texttt{\normalfont #1}}}
-
-%%% Settings for Colors 
-\input{./settings/colorsSettings.tex}
-
-
-%%% Settings for images 
-\input{./settings/imgSettings.tex}
-\graphicspath{ {./pic/title/}{./pic/general/} } %put in all graphix folders in a new{} 
-
-%%% Settings for Tikz 
-% Tikz is an image generator  
-\input{./settings/tikzSettings.tex}
-
-
-%%% Settings for Tables  
-\input{./settings/tableSettings.tex}
-
-
-%%% Settings for mathmatics 
-\input{./settings/mathSettings.tex}
-
 
 %%% Settings for listings 
 \input{./settings/lstSettings.tex}
