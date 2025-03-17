@@ -1,7 +1,7 @@
-\nomenclatureentry{a\(G\)@[{\(G\)}]\begingroup Giga\nomeqref {0}|nompageref}{1}
-\nomenclatureentry{a\(M\)@[{\(M\)}]\begingroup Mega\nomeqref {0}|nompageref}{1}
-\nomenclatureentry{a\(Hz\)@[{\(Hz\)}]\begingroup Frequenz: Herz in $\frac{1}{s}$\nomeqref {0}|nompageref}{1}
-\nomenclatureentry{a\(B\)@[{\(B\)}]\begingroup Byte\nomeqref {0}|nompageref}{1}
-\nomenclatureentry{a\(Bit\)@[{\(Bit\)}]\begingroup Bit\nomeqref {0}|nompageref}{1}
-\nomenclatureentry{a\(s\)@[{\(s\)}]\begingroup Sekunde\nomeqref {0}|nompageref}{1}
-\nomenclatureentry{a\(V\)@[{\(V\)}]\begingroup Volt\nomeqref {0}|nompageref}{1}
+\nomenclatureentry{a\(G\)@[{\(G\)}]\begingroup Giga\nomeqref {0.0}|nompageref}{1}
+\nomenclatureentry{a\(M\)@[{\(M\)}]\begingroup Mega\nomeqref {0.0}|nompageref}{1}
+\nomenclatureentry{a\(Hz\)@[{\(Hz\)}]\begingroup Frequenz: Herz in $\frac{1}{s}$\nomeqref {0.0}|nompageref}{1}
+\nomenclatureentry{a\(B\)@[{\(B\)}]\begingroup Byte\nomeqref {0.0}|nompageref}{1}
+\nomenclatureentry{a\(Bit\)@[{\(Bit\)}]\begingroup Bit\nomeqref {0.0}|nompageref}{1}
+\nomenclatureentry{a\(s\)@[{\(s\)}]\begingroup Sekunde\nomeqref {0.0}|nompageref}{1}
+\nomenclatureentry{a\(V\)@[{\(V\)}]\begingroup Volt\nomeqref {0.0}|nompageref}{1}

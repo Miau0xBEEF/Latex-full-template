@@ -1,4 +1,14 @@
 \documentclass[a4paper,12pt]{article}
+
+
+%more subsections 
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
  
 \usepackage[german]{babel}	% Deutsche überschriften und Silbentrennung
 \usepackage[T1]{fontenc}
@@ -13,11 +23,31 @@
 \usepackage{setspace} %Zeilenabstände
 \onehalfspacing 
 
+
+
+
+
+
 \usepackage{geometry}
 \geometry{a4paper, left=40mm, right=30mm, bottom=25mm, top=25mm}
 
 
 
+
+
+
+% change the size of header entries section/subsection
+\newcommand{\changefont}{%
+    \fontsize{7}{8}\selectfont
+}
+\fancyhf{}
+\fancyhead[LE,RO]{\changefont \slshape \rightmark} %section
+\fancyhead[RE,LO]{\changefont \slshape \leftmark} %chapter
+\fancyfoot[C]{\changefont \thepage} %footer
+\pagestyle{fancy}
+
+\setlength{\footnotesep}{0.5cm}
+\setlength{\skip\footins}{2cm}
 
 
 

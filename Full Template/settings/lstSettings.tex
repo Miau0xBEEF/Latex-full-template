@@ -1,30 +1,37 @@
-\usepackage{caption}  % For caption customization
+
+\usepackage{listings}
+
+%\lstset{language=Pascal}
+\lstset{%
+inputencoding=utf8,
+extendedchars=true,
+literate=%
+{Ö}{{\"O}}1
+{Ä}{{\"A}}1
+{Ü}{{\"U}}1
+{ß}{{\ss}}2
+{ü}{{\"u}}1
+{ä}{{\"a}}1
+{ö}{{\"o}}1
+}
+
 
 \DeclareCaptionFont{white}{\color{white}} % Maybe this will make some truble
 
-%\DeclareCaptionFormat{listing}{\noindent\colorbox{gray}{\parbox{\textwidth-2\fboxsep}{#1#2#3}}}
-\newlength{\tempwidth}
-\setlength{\tempwidth}{\textwidth}
-\addtolength{\tempwidth}{-2\fboxsep}
+\DeclareCaptionFormat{listing}{\noindent\colorbox{gray}{\parbox{\textwidth-2\fboxsep}{#1#2#3}}}
+%\newlength{\tempwidth}
+%\setlength{\tempwidth}{\textwidth}
+%\addtolength{\tempwidth}{-2\fboxsep}
+
 \DeclareCaptionFormat{listing}{\noindent\colorbox{gray}{\parbox{\tempwidth}{#1#2#3}}}
 \captionsetup[lstlisting]{format=listing,aboveskip=-0.1em,labelfont=white,textfont=white,font={small,tt}}
 
 
 
-\usepackage{listings} %For code 
 
 
-%Umlaute in Listings korrekt ausgeben!
-\lstset{literate=%
-    {Ö}{{\"O}}1
-    {Ä}{{\"A}}1
-    {Ü}{{\"U}}1
-    {ß}{{\ss}}1
-    {ü}{{\"u}}1
-    {ä}{{\"a}}1
-    {ö}{{\"o}}1
-    {~}{{\textasciitilde}}1
-}
+
+
 
 
 
@@ -218,9 +225,9 @@
 }
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Binding a Listing configuration to a new command %%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Binding a Listing configuration to a new command %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\lstsetappendix}{%
     \lstset{ 
         basicstyle=\footnotesize,

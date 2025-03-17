@@ -6,29 +6,11 @@
  
  
  
-%Mehr subsections 
-\usepackage{titlesec}
-\setcounter{secnumdepth}{4}
-\titleformat{\paragraph}
-{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
-\titlespacing*{\paragraph}
-{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
 
 %nötig da sonst pgf nicht mit tikz zusammenarbeitet
 \usepackage{etex}
 \usepackage{indentfirst}
-\usepackage{amsfonts} %Mathezeichen
-\usepackage{amssymb}
-\usepackage{mathtools}
-\usepackage{gnuplottex}
-\usepackage[german]{babel}	% Deutsche überschriften und Silbentrennung
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-
-
-
-
-
 
 
 
@@ -43,22 +25,18 @@
 
 %\usepackage{textcomp}
 %\usepackage{ucs}
-\usepackage[justification=centering]{caption}
+
 %\captionsetup[lstlisting]{font={small,tt}}
-\usepackage{geometry}
-\geometry{a4paper, left=40mm, right=30mm, bottom=25mm, top=25mm}
+
+
 %TODO wichtig, ohne geht nicht
 \usepackage{pstricks}
 %für alle tex versionen
 %\usepackage{auto-pst-pdf}
 %\usepackage{siunitx}
-\usepackage{amsmath}
-\numberwithin{equation}{section}
+
 \usepackage[most]{tcolorbox}
 \usepackage{makecell}
-\usepackage{sty/durtree}
-
-\usepackage{enumitem} % Required for customizing the itemize environment
 
 
 
@@ -98,22 +76,6 @@ year}
 
 
 
-%   %   %   %   %   %   %   %   %   %   % TEST  %   %   %   %   %   %   %   %   %   %   %   %   %   %   %   % 
-
-% % % % % % % % % % % % % HEADER / FOOTER manipulation % % % % % % % % % %
-% change the size of header entries section/subsection
-\newcommand{\changefont}{%
-    \fontsize{7}{8}\selectfont
-}
-\fancyhf{}
-\fancyhead[LE,RO]{\changefont \slshape \rightmark} %section
-\fancyhead[RE,LO]{\changefont \slshape \leftmark} %chapter
-\fancyfoot[C]{\changefont \thepage} %footer
-\pagestyle{fancy}
-
-\setlength{\footnotesep}{0.5cm}
-\setlength{\skip\footins}{2cm}
-% % % % % % % % % % % % % % % TITLE % % % % % % % % % % % % % % % % %
 
 
 
@@ -121,15 +83,6 @@ year}
 
 
 
-
-
-
-
-
-
-\DeclareCaptionFont{white}{\color{white}}
-\DeclareCaptionFormat{listing}{\noindent\colorbox{gray}{\parbox{\textwidth-2\fboxsep}{#1#2#3}}}
-\captionsetup[lstlisting]{format=listing,aboveskip=-0.1em,labelfont=white,textfont=white,font={small,tt}}
 
 
 
@@ -162,7 +115,7 @@ section]                            % im Inhaltsverzeichnis auf section-Ebene er
 
                  
 
-\usepackage{longtable}
+
 
 
 
