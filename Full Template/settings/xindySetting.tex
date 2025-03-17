@@ -1,0 +1,17 @@
+\usepackage[xindy]{imakeidx}
+%\usepackage[nomain,acronym,xindy,toc,automake]{glossaries} % nomain, if you define glossaries in a file, and you use \include{INP-00-glossary}
+\usepackage[
+nonumberlist,                       % keine Seitenzahlen anzeigen
+acronym,                            % ein Abkürzungsverzeichnis erstellen
+%toc,                                % Einträge im Inhaltsverzeichnis
+section]                            % im Inhaltsverzeichnis auf section-Ebene erscheinen
+{glossaries}     
+
+\GlsSetXdyCodePage{duden-utf8}
+\newglossary[slg]{siemens}{sgr}{sgo}{Siemens Glossary}
+
+\usepackage{translator}
+
+                 
+\makeglossaries 
+\makeindex

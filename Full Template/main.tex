@@ -56,28 +56,11 @@
 
 
 
-\usepackage[xindy]{imakeidx}
-%\usepackage[nomain,acronym,xindy,toc,automake]{glossaries} % nomain, if you define glossaries in a file, and you use \include{INP-00-glossary}
-\usepackage[
-nonumberlist,                       % keine Seitenzahlen anzeigen
-acronym,                            % ein Abkürzungsverzeichnis erstellen
-%toc,                                % Einträge im Inhaltsverzeichnis
-section]                            % im Inhaltsverzeichnis auf section-Ebene erscheinen
-{glossaries}     
-
-\GlsSetXdyCodePage{duden-utf8}
-\newglossary[slg]{siemens}{sgr}{sgo}{Siemens Glossary}
-
-\usepackage{translator}
-
-                 
-\makeglossaries 
-\makeindex
 
 
 
-
-
+%%% Settings for xindy 
+\input{./settings/xindySetting.tex}
 
 %%% Settings for bibliography 
 \input{./settings/bibSettings.tex}
@@ -91,13 +74,14 @@ section]                            % im Inhaltsverzeichnis auf section-Ebene er
 
 
 
-%%%%%%%%%%%%%%% CUSTOM COMMANDS 
-\newcommand{\graytt}[1]{\textcolor{gray}{\texttt{\normalfont #1}}}
 
 
 
 %%%%%%%%%%%%%% Versioning the File %%%%%%%%%%%%%%
 \input{./apps/version.tex}
+
+%%%%%%%%%%%%%%% CUSTOM COMMANDS %%%%%%%%%%%%%%%
+\input{./apps/commands.tex}
 
 
 
@@ -113,14 +97,17 @@ section]                            % im Inhaltsverzeichnis auf section-Ebene er
 
 
 
+
+
+
+
+
+
 %==========================================================================
 % START OF DOCUMENT
 %==========================================================================
 
 \begin{document}
-
-
-
 \pagenumbering{gobble}	%no page numbers
 \pagestyle{fancy}
 
@@ -156,13 +143,9 @@ section]                            % im Inhaltsverzeichnis auf section-Ebene er
 \listoffigures 
 
 
-
-
 \lstsetappendix %Setting default appendix style for listing  
 \addcontentsline{toc}{subsection}{Listings}
 \lstlistoflistings
-
-
 
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.12)  17 MAR 2025 13:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.12)  17 MAR 2025 14:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1377,9 +1377,9 @@ Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 ))
 \verbatim@out=\write4
-runsystem(touch w18-test-2025317837.tex)...disabled (restricted).
+runsystem(touch w18-test-2025317842.tex)...disabled (restricted).
 
-runsystem(rm -f w18-test-2025317837.tex)...disabled (restricted).
+runsystem(rm -f w18-test-2025317842.tex)...disabled (restricted).
 
 runsystem(rm -f "main.gnuploterrors")...disabled (restricted).
 
@@ -1417,9 +1417,11 @@ File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 File: listings.cfg 2024/09/23 1.10c listings configuration
 ))
 Package: listings 2024/09/23 1.10c (Carsten Heinz)
-) (C:\Users\Claas\AppData\Local\Programs\MiKTeX\tex/latex/imakeidx\imakeidx.sty
+) (settings/xindySetting.tex
+(C:\Users\Claas\AppData\Local\Programs\MiKTeX\tex/latex/imakeidx\imakeidx.sty
 Package: imakeidx 2016/10/15 v1.3e Package for typesetting indices in a synchro
 nous mode
+
 (C:\Users\Claas\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 )
@@ -1642,23 +1644,25 @@ Package: glossary-tree 2024/11/01 v4.55 (NLCT)
 ))
 
 Package glossaries Warning: Not in xindy mode --- ignoring \GlsSetXdyCodePage o
-n input line 68.
+n input line 10.
 
 \glswrite=\write5
 \glo@main@file=\write6
 \openout6 = `main.glo'.
 
-Package glossaries Info: Writing glossary file main.glo on input line 74.
+Package glossaries Info: Writing glossary file main.glo on input line 16.
 \glo@acronym@file=\write7
 \openout7 = `main.acn'.
 
-Package glossaries Info: Writing glossary file main.acn on input line 74.
+Package glossaries Info: Writing glossary file main.acn on input line 16.
 \glo@siemens@file=\write8
 \openout8 = `main.sgo'.
 
-Package glossaries Info: Writing glossary file main.sgo on input line 74.
+Package glossaries Info: Writing glossary file main.sgo on input line 16.
+)
 \main@idxfile=\write9
 \openout9 = `main.idx'.
+
 
 Writing index file main.idx
 (settings/bibSettings.tex
@@ -1971,7 +1975,7 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \c@versionNumber=\count577
 \versionfile=\read6
 \versionfileout=\write13
-) (bib/acronym.tex) (bib/nomenclature.tex)
+) (apps/commands.tex) (bib/acronym.tex) (bib/nomenclature.tex)
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
@@ -1981,24 +1985,24 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
 
 (C:\Users\Claas\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -2060,8 +2064,8 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package scrwfile Info: Using immediate redefinition of `\@starttoc' on input li
-ne 120.
-Package scrwfile Info: Extending `\@starttoc`  on input line 120.
+ne 110.
+Package scrwfile Info: Extending `\@starttoc`  on input line 110.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -2072,7 +2076,7 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 120.
+Package hyperref Info: Link coloring ON on input line 110.
 
 (main.out) (main.out)
 \@outlinefile=\write14
@@ -2083,7 +2087,7 @@ Package hyperref Info: Link coloring ON on input line 120.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 120.
+ on input line 110.
 
 
 Package siunitx Warning: Detected the "physics" package:
@@ -2103,9 +2107,9 @@ File: translations-basic-dictionary-german.trsl (german translation file `trans
 lations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `german'. on input line 120.
+or `german'. on input line 110.
 \c@lstlisting=\count586
-Package tocbasic Info: setting babel extension for `lol' on input line 120.
+Package tocbasic Info: setting babel extension for `lol' on input line 110.
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
 
@@ -2121,8 +2125,8 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' not found.
 
 No file main.bbl.
-Package biblatex Info: Reference section=0 on input line 120.
-Package biblatex Info: Reference segment=0 on input line 120.
+Package biblatex Info: Reference section=0 on input line 110.
+Package biblatex Info: Reference segment=0 on input line 110.
 (chapters/0_1_Title.tex) (chapters/0_2_declaration_of_honesty.tex)
 (chapters/0_3_abstract.tex) (main.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
@@ -2236,13 +2240,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 65427 strings out of 473529
- 1489800 string characters out of 5714773
- 2549429 words of memory out of 5000000
- 87532 multiletter control sequences out of 15000+600000
+ 65439 strings out of 473529
+ 1490224 string characters out of 5714773
+ 2549477 words of memory out of 5000000
+ 87538 multiletter control sequences out of 15000+600000
  573933 words of font info for 78 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 120i,12n,120p,2352b,1826s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 120i,12n,120p,2388b,1826s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Claas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
 0700.pk> <C:\Users\Claas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\ecbx1200.pk> <C:\Users\Claas\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
