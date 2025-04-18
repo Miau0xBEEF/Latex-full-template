@@ -1,9 +1,0 @@
-\babel@toc {german}{}\relax 
-\contentsline {subsection}{Literatur}{1}{Doc-Start}%
-\contentsline {subsection}{\numberline {0.1}Bibliography with Books}{1}{subsection.0.1}%
-\contentsline {subsection}{\numberline {0.2}Bibliography with Articles}{1}{subsection.0.2}%
-\contentsline {subsection}{\numberline {0.3}Bibliography with misc}{1}{subsection.0.3}%
-\contentsline {subsection}{\numberline {0.4}Bibliography with online}{1}{subsection.0.4}%
-\contentsline {subsubsection}{\numberline {0.4.1}Using a Filter}{1}{subsubsection.0.4.1}%
-\contentsline {subsection}{Abbildungsverzeichnis}{1}{subsubsection.0.4.1}%
-\contentsline {subsection}{Listings}{1}{subsubsection.0.4.1}%
